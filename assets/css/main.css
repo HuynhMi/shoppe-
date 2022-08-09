@@ -15,12 +15,16 @@
 }
 
 .navbar__list {
-    
+    margin: 10px 0px;
 }
 
 .navbar__item {
-    padding: 10px 10px;
+    padding: 0px 10px;
     position: relative;
+
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
 }
 
 .navbar__item--separate::before {
@@ -36,65 +40,98 @@
     background-color: rgba(255, 255, 255, 0.384);
 }
 
-.navbar__item {
-    font-size: 1.4rem;
+.navbar__item--has-qr-code {
     position: relative;
 }
 
-.navbar__item:hover {
-    opacity: 0.7;
-}
-
-.navbar__item--no-hover:hover {
-    opacity: unset;
-}
 .navbar__item,
-.navbar__link {
+.navbar__link,
+.navbar__icon--link {
     color: var(--white-color);
 }
 
-.navbar__link {
-    
+.navbar__item:hover,
+.navbar__link:hover,
+.navbar__icon--link:hover {
+    color: rgb(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+
+.navbar__title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
 }
 
 .navbar__icon {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+}
+
+.navbar__icon--pull-left {
     position: relative;
+    left: -4px;
 }
 
-.navbar__icon--left {
-    left: -1px;
+.navbar__icon--pull-right {
+    position: relative;
+    right: -4px;
 }
 
-.navbar__icon--right {
-    right: -1px;
-}
-
-.navbar__icon--mr-2 {
-    margin-right: 2px;
-}
-
-.navbar__icon--ml-5 {
+.navbar__icon--margin-left-5 {
     margin-left: 5px;
 }
 
-
+/* Header QR code */
 .navbar-code {
     position: absolute;
-    width: 185px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    top: calc(100% + 10px);
+    width: 184px;
+
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
     background-color: var(--white-color);
+
+    display: none;
+    opacity: 0;
+
+    transition: all linear 200ms;
+}
+
+.navbar-code::before {
+    content: "";
+    
+    position: absolute;
+    left: 0px;
+    --top: 12;
+    top: calc(var(--top) * -1px);
+    height: calc(var(--top) * 1px);
+    width: 100%;
+
+    background-color: transparent;
+}
+
+.navbar__item--has-qr-code:hover .navbar-code {
+    opacity: 1;
+    display: block;
 }
 
 .navbar-code__img-qr {
     width: 100%;
 }
 
-.navbar-code__app {
+.navbar-code__apps-qr {
+    padding: 5px 11px 11px;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .navbar-code__img-app {
-    height: 30px;
+    width: 46%;
+    object-fit: contain;
+}
+
+.navbar-code__img-app:last-child {
+    margin-top: 10px;
 }
