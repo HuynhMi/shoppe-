@@ -61,14 +61,37 @@
                                 <span class="navbar__icon navbar__icon--pull-left"><i class="fa-solid fa-bell"></i></span>
                                 Thông Báo
                                 <div class="navbar-notification">
-                                    <div class="navbar-notification__img-wrapper">
-                                        <img src="./assets/img/notication.png" alt="" class="navbar-notification__img">
-                                        <span class="navbar-notification__label">Đăng nhập để xem thông tin</span>
+                                    <!-- There is notification -->
+                                    <div class="notify">
+                                        <p class="notify__title">Thông báo mới nhận</p>
+                                        <ul class="notify__list">
+                                            <li class="notify__item notify__item--viewed">
+                                                <a href="" class="notify__link">
+                                                    <img src="./assets/img/notification__warn.png" alt="notification image" class="notify__img">
+                                                    <div class="notify__info">
+                                                        <span class="notify__name">
+                                                            Cảnh báo: Yêu cầu đăng nhập mới
+                                                        </span>
+                                                        <span class="notify__desc">
+                                                            Tài khoản của bạn vừa được phát hiện đăng nhập vào lúc Aug 08, 2022.
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="navbar-notification__btns-list">
-                                        <div class="navbar-notification__btn">Đăng Ký</div>
-                                        <div class="navbar-notification__btn">Đăng Nhập</div>
-                                    </div>
+
+                                    <!-- There isn't notification -->
+                                    <!-- <div class="no-notify">
+                                        <div class="no-notify__img-wrapper">
+                                            <img src="./assets/img/notication.png" alt="" class="no-notify__img">
+                                            <span class="no-notify__label">Đăng nhập để xem thông tin</span>
+                                        </div>
+                                        <div class="no-notify__btns-list">
+                                            <div class="no-notify__btn">Đăng Ký</div>
+                                            <div class="no-notify__btn">Đăng Nhập</div>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </li>
                             <li class="navbar__item">

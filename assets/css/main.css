@@ -1,4 +1,4 @@
-/* Header */
+/* ----------------- HEADER ----------------- */
 .header {
     height: var(--header-height);
     background-image: linear-gradient(#F53E2D, #FF6533);
@@ -8,6 +8,7 @@
 
 }
 
+/* NAVIGATION */
 .navbar,
 .navbar__list {
     display: flex;
@@ -82,7 +83,7 @@
     margin-left: 5px;
 }
 
-/* Header QR code */
+/* QR CODE */
 .navbar-code {
     position: absolute;
     top: calc(100% + 10px);
@@ -134,7 +135,7 @@
     margin-top: 10px;
 }
 
-/* Header notification */
+/* NAVBAR - NOTIFICATION */
 .navbar-notification {
     position: absolute;
     top: calc(100% + 10px);
@@ -144,18 +145,22 @@
     min-height: 300px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
     border: 1px solid #eeeeee;
+    border-radius: 3px;
 
     background-color: var(--white-color);
     color: var(--text-color);
 
-    display: flex;
-    flex-direction: column;
-
-    visibility: hidden;
+    /* transform-origin: 90% 0%;
     opacity: 0;
     transform: scale(0);
-    transform-origin: 90% 0%;
-    transition: all linear 200ms;
+    visibility: hidden;
+    transition: all linear 200ms; */
+}
+
+.navbar__item--has-notication:hover .navbar-notification {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .navbar-notification::before {
@@ -183,39 +188,41 @@
     background-color: transparent;
 }
 
-.navbar__item--has-notification:hover .navbar-notification {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
+
+/* WITHOUT NOTIFY */
+.no-notify {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
 }
 
-.navbar-notification__img-wrapper {
+.no-notify__img-wrapper {
     flex: 1;
     flex-direction: column;
     cursor: default;
 }
 
-.navbar-notification__img-wrapper,
-.navbar-notification__btns-list {
+.no-notify__img-wrapper,
+.no-notify__btns-list {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.navbar-notification__img {
+.no-notify__img {
     width: 100px;
     object-fit: contain;
 }
 
-.navbar-notification__label {
+.no-notify__label {
     margin-top: 25px;
 }
 
-.navbar-notification__btns-list {
+.no-notify__btns-list {
 
 }
 
-.navbar-notification__btn {
+.no-notify__btn {
     font-size: 1.5rem;
     text-align: center;
 
@@ -228,8 +235,63 @@
 
 }   
 
-.navbar-notification__btn:hover {
+.no-notify__btn:hover {
 
     background-color: rgb(236, 236, 236, 1);
     color: var(--primary);
+}
+
+/* WITH NOTIFY */
+
+.notify {
+
+}
+
+.notify__title {
+    font-size: 1.6rem;
+    padding: 12px 0px;
+    margin-left: 10px;
+    color: #ccc;
+}
+
+.notify__list {
+
+}
+
+.notify__item {
+}
+
+.notify__item--viewed {
+    background-color: #f53e2d10;
+}
+.notify__link {
+    display: flex;
+    padding: 10px 10px;
+}
+
+.notify__img {
+    width: 30px;
+    object-fit: contain;
+}
+
+.notify__info {
+    flex: 1;
+    margin-left: 5px;
+}
+
+.notify__name {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.notify__name,
+.notify__desc {
+    display: block;
+}
+
+
+.notify__desc {
+    font-size: 1.3rem;
+    color: #6d6d6d;
+    margin-top: 5px;
 }
