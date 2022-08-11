@@ -63,9 +63,11 @@
                                 <div class="navbar-notification">
                                     <!-- There is notification -->
                                     <div class="notify">
-                                        <p class="notify__title">Thông báo mới nhận</p>
+                                        <header class="notify-header">
+                                            <p class="notify-header__title">Thông báo mới nhận</p>
+                                        </header>
                                         <ul class="notify__list">
-                                            <li class="notify__item notify__item--viewed">
+                                            <li class="notify__item">
                                                 <a href="" class="notify__link">
                                                     <img src="./assets/img/notification__warn.png" alt="notification image" class="notify__img">
                                                     <div class="notify__info">
@@ -74,11 +76,57 @@
                                                         </span>
                                                         <span class="notify__desc">
                                                             Tài khoản của bạn vừa được phát hiện đăng nhập vào lúc Aug 08, 2022.
+                                                            
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notify__item  notify__item--viewed">
+                                                <a href="" class="notify__link">
+                                                    <img src="https://cf.shopee.vn/file/31cf9072502871ebf6e5a2f11eb16529_tn" alt="notification image" class="notify__img">
+                                                    <div class="notify__info">
+                                                        <span class="notify__name">
+                                                            Giao kiện hàng thành công. Bạn đã đánh giá sản phẩm chưa?
+                                                        </span>
+                                                        <span class="notify__desc">
+                                                            Kiện hàng AB123 đã được giao thành công.
+                                                            14:57 27-07-2022
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notify__item">
+                                                <a href="" class="notify__link">
+                                                    <img src="https://cf.shopee.vn/file/31cf9072502871ebf6e5a2f11eb16529_tn" alt="notification image" class="notify__img">
+                                                    <div class="notify__info">
+                                                        <span class="notify__name">
+                                                            Giao kiện hàng thành công. Bạn đã đánh giá sản phẩm chưa?
+                                                        </span>
+                                                        <span class="notify__desc">
+                                                            Kiện hàng AB123 đã được giao thành công.
+                                                            14:57 27-07-2022
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notify__item">
+                                                <a href="" class="notify__link">
+                                                    <img src="https://cf.shopee.vn/file/31cf9072502871ebf6e5a2f11eb16529_tn" alt="notification image" class="notify__img">
+                                                    <div class="notify__info">
+                                                        <span class="notify__name">
+                                                            Giao kiện hàng thành công. Bạn đã đánh giá sản phẩm chưa?
+                                                        </span>
+                                                        <span class="notify__desc">
+                                                            Kiện hàng AB123 đã được giao thành công.
+                                                            14:57 27-07-2022
                                                         </span>
                                                     </div>
                                                 </a>
                                             </li>
                                         </ul>
+                                        <footer class="notify-footer">
+                                            <a href="" class="notify-footer__link">Xem tất cả</a>
+                                        </footer>
                                     </div>
 
                                     <!-- There isn't notification -->
@@ -98,10 +146,14 @@
                                 <span class="navbar__icon navbar__icon--pull-left"><i class="fa-solid fa-circle-question"></i></span>
                                 Hỗ Trợ
                             </li>
-                            <li class="navbar__item">
+                            <li class="navbar__item navbar__item--has-language">
                                 <span class="navbar__icon navbar__icon--pull-left"><i class="fa-solid fa-globe"></i></span>
                                 Tiếng Việt
                                 <span class="navbar__icon navbar__icon--pull-right"><i class="fa-solid fa-angle-down"></i></span>
+                                <div class="navbar-language">
+                                    <span class="navbar-language__text">Tiếng Việt</span>
+                                    <span class="navbar-language__text">English</span>
+                                </div>
                             </li>
                             <li class="navbar__item navbar__item--separate">
                                 <a href="" class="navbar__link ">Đăng Ký</a>
@@ -162,6 +214,118 @@
             </div>
             <div class="footer-bottom"></div>
         </footer>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__inner">
+                <!-- FORM AUTHENTICATION -->
+                <!-- Register form -->
+                <div class="auth-form">
+                    <h3 class="auth-form__heading">Đăng Ký</h3>
+                    <form action="" class="auth-form__body">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập mật khẩu của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                        </div>
+                        <div class="auth-form__control">
+                            <div class="row">
+                                <div class="col l-6">
+                                    <button class="auth-form__btn auth-form__btn--normal">TRỞ VỀ</button>
+                                </div>
+                                <div class="col l-6">
+                                    <button class="auth-form__btn auth-form__btn--primary">ĐĂNG KÝ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <span class="auth-form__separate">HOẶC</span>
+                    <div class="auth-form__social">
+                        <div class="row">
+                            <div class="col l-6">
+                                <a href="" class="auth-form__btn auth-form__btn--border">
+                                    <i class="auth-form__btn-icon fa-brands fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </div>
+                            <div class="col l-6">
+                                <a href="" class="auth-form__btn auth-form__btn--border">
+                                    <i class="auth-form__btn-icon fa-brands fa-google"></i>
+                                    Google
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="auth-form-term">
+                        <span class="auth-form__text auth-form__text--size-s ">
+                            Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                            <a href="" class="auth-form__text auth-form__text--size-s auth-form__text--primary">Điều khoản dịch vụ</a> 
+                            &
+                            <a href="" class="auth-form__text--primary">Chính sách bảo mật</a>
+                        </span>
+                    </div> -->
+                    <footer class="auth-form__footer">
+                        <p class="auth-form__text">
+                            Bạn mới biết đến Shopee? <span class="auth-form__switch-btn">Đăng ký</span>
+                        </p>
+                    </footer>
+                </div>
+                <!-- Login form -->
+                <!-- <div class="auth-form">
+                    <h3 class="auth-form__heading">Đăng Nhập</h3>
+                    <form action="" class="auth-form__body">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập mật khẩu của bạn">
+                        </div>
+                        <div class="auth-form__control">
+                            <div class="row">
+                                <div class="col l-6">
+                                    <button class="auth-form__btn auth-form__btn--normal">TRỞ VỀ</button>
+                                </div>
+                                <div class="col l-6">
+                                    <button class="auth-form__btn auth-form__btn--primary">ĐĂNG NHẬP</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auth-form-additional">
+                            <a href="" class="auth-form__text auth-form__text--size-s auth-form__text--second">Quên mật khẩu</a> 
+                            <a href="" class="auth-form__text auth-form__text--size-s auth-form__text--second">Đăng nhập bằng sms</a>
+                        </div>
+                    </form>
+                    <span class="auth-form__separate">HOẶC</span>
+                    <div class="auth-form__social">
+                        <div class="row">
+                            <div class="col l-6">
+                                <a href="" class="auth-form__btn auth-form__btn--border">
+                                    <i class="auth-form__btn-icon fa-brands fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </div>
+                            <div class="col l-6">
+                                <a href="" class="auth-form__btn auth-form__btn--border">
+                                    <i class="auth-form__btn-icon fa-brands fa-google"></i>
+                                    Google
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <footer class="auth-form__footer">
+                        <p class="auth-form__text">
+                            Bạn mới biết đến Shopee? <span class="auth-form__switch-btn">Đăng ký</span>
+                        </p>
+                    </footer>
+                </div> -->
+        </div>
     </div>
 </body>
 </html>

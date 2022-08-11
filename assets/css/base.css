@@ -1,9 +1,10 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #333;
+    --text-color: #000000cc;
     --header-height: 120px;
     --primary: #EE4D2D;
+    --border-color: #ccc;
     
 }
 
@@ -39,3 +40,4 @@ a {
     }
 }
 
+/* Global classes */
