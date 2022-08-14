@@ -62,7 +62,7 @@ a {
         display: block;
         height: var(--height);
         line-height: calc(var(--height) + 1px);
-        width: 100%;
+        min-width: 120px;
 
         font-size: 1.5rem;
         text-align: center;
@@ -75,6 +75,10 @@ a {
 
         cursor: pointer;
         
+    }
+
+    .btn.btn--width-full {
+        width: 100%;
     }
 
     .btn.btn--primary {
