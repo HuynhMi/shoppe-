@@ -81,6 +81,22 @@ a {
         width: 100%;
     }
 
+    .btn.btn--second {
+        --height: 38px;
+        background-color: rgb(98 98 215);
+        color: var(--white-color);
+    }
+
+    .btn.btn--third {
+        --height: 34px;
+        background-color: var(--white-color);
+        color: var(--text-color);
+    }
+
+    .btn.btn--third:hover {
+        opacity: 0.9;
+    }
+
     .btn.btn--primary {
         background-color: var(--primary);
         color: var(--white-color);
@@ -94,11 +110,7 @@ a {
         background-color: rgba(0, 0, 0, 0.04);
     }
 
-    .btn.btn--second {
-        --height: 38px;
-        background-color: rgb(98 98 215);
-        color: var(--white-color);
-    }
+    
 
     .btn--border {
         border: 1px solid var(--border-color);
