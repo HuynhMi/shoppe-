@@ -45,8 +45,8 @@
 
 @media (min-width: 1024px) {
     .row {
-        margin-left: -12px;
-        margin-right: -12px;
+        margin-left: -5px;
+        margin-right: -5px;
     }
 
     .row.gutter--5 {
@@ -55,8 +55,8 @@
     }
     
     .col {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .row.gutter--5 .col {
@@ -76,6 +76,11 @@
     .l-10 {
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
+    }
+
+    .l-10-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
     }
 }
 
