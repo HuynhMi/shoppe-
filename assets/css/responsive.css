@@ -1,0 +1,132 @@
+
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 80px;
+        --top-nav-height: 0px;
+        --sort-bar-height: 40px;
+    }
+
+    .hide-on-tablet-mobile {
+        display: none;
+    }
+
+    .cart-wrap {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+
+        border-radius: unset;
+        transition: 0ms;
+    }
+
+    
+
+    .cart-wrap::before {
+        display: none;
+    }
+
+    .cart {
+        width: 100%;
+    }
+
+    .cart__heading,
+    .cart-product,
+    .cart-footer {
+        padding-left: calc((100% - 644px)/2);
+        padding-right: calc((100% - 644px)/2);
+    }
+
+    .search-suggest {
+        position: unset;
+        margin-top: 5px;
+    }
+
+    .header-sort-bar__list {
+        display: flex;
+    }
+}
+
+/* TABLET */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header-cart {
+        width: 80px;
+    }
+
+    .header-cart-inner {
+        margin: 0 0 0 auto;
+    }
+}
+
+
+/* ON MOBILE */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header-with-search-inner {
+        justify-content: space-between;
+    }
+
+    .header-logo,
+    .header-cart {
+        width: unset;
+    }
+
+    .header-cart__icon {
+        padding-right: 30px;
+    }
+
+    .header-cart__subtotal {
+        left: 40%;
+    }
+
+    .header-search {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        z-index: 1;
+        animation: mobileSearchAppear linear 200ms;
+
+        display: none;
+    }
+
+
+    .search-bar {
+        --height: 40px;
+        padding: 5px 15px;
+    }
+
+    .header-search-mobile {
+        display: block;
+    }
+
+    .search-bar-history {
+        position: fixed;
+        top: calc(var(--header-height) + 51px);
+        right: 0;
+        width: unset;
+        border-radius: unset;
+        border-bottom: 1px solid #e9e9e9;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .search-bar-history__list {
+        padding-bottom: 5px;
+    }
+
+    .search-bar__input {
+        padding: 0px 0px;
+    }
+}

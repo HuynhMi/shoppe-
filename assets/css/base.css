@@ -8,8 +8,9 @@
     --header-height: 120px;
     --top-nav-height: 35px;
     --header-with-search-height: calc(var(--header-height) - var(--top-nav-height));
-
+    --sort-bar-height: 0px;
     --top-tooltip: calc(100% + 4px);
+
 }
 
 *, *::after, *::before {
@@ -53,6 +54,21 @@ a {
     }
 }
 
+@keyframes mobileSearchAppear {
+    0% {
+        top: calc(var(--header-height)/2);
+        opacity: 0;
+    }
+    50% {
+        top: calc(var(--header-height));
+        opacity: 0.1;
+    }
+    100% {
+        top: calc(var(--header-height));
+        opacity: 1;
+    }
+}
+
 
 /* Global classes */
     /* Button */
@@ -68,7 +84,7 @@ a {
         text-align: center;
 
         border: none;
-        border-radius: 2px;
+        border-radius: 3px;
 
         background-color: transparent;
         color: var(--text-color);
