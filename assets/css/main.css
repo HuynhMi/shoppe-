@@ -1410,7 +1410,7 @@ h5.footer__heading {
 .footer__separate {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     display: block;
-    margin-bottom: 60px;
+    margin: 40px 0px;
 }
 
 h6.footer__heading {
@@ -1442,25 +1442,36 @@ h6.footer__heading {
     position: relative;
 }
 
-.footer-category__item::before {
+.footer-category__item::before,
+.footer-copyright__item::before {
     content: "";
     position: absolute;
     top: 50%;
-    right: -1px;
 
-    height: 11px;
     width: 1px;
     background-color: rgba(0, 0, 0, 0.25);
 
     transform: translateY(-50%);
 }
 
-.footer-category__item:last-child::before {
+.footer-category__item::before {
+    right: -1px;
+    height: 11px;
+}
+
+.footer-copyright__item::before {
+    right: -3px;
+    height: 100%;
+}
+
+.footer-category__item:last-child::before ,
+.footer-copyright__item:last-child::before{
     display: none;
 }
 
 .footer-category__link,
-.footer__link {
+.footer__link,
+.footer-social__link {
     font-size: 1.2rem;
     line-height: 2rem;
     color: var(--text-color);
@@ -1477,16 +1488,75 @@ h6.footer__heading {
     padding: 50px 0px;
 }
 
-.footer__list {
+.footer__list,
+.footer-social__list,
+.footer-download {
     margin-top: 10px;
 }
 .footer__link {
     padding: 5px 0px;
     display: block;
 }
-.footer-bottom {
-    min-height: 200px;
-    background-color: #F5F5F5;
+
+.footer-social__link {
+    padding: 6px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-social__link-icon {
+    color: #000;
+    font-size: 1.6rem;
+    margin: -1px 10px 0px 0px;
+}
+
+.footer-download {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-download__qr-img {
+    --height: 86px;
+    width: var(--height);
+    height: var(--height);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-download-apps {
+    margin-left: 15px;
+}
+
+.footer-download-app__img {
+    height: 17px;
+    margin: 2px 0px;
+}
+
+.footer-copyright {
+   
+}
+
+.footer-copyright__content {
+    text-align: center;
+}
+
+.footer-copyright__text,
+.footer-copyright__link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 2rem;
+}
+
+.footer-copyright__list {
+    display: inline;
+    
+}
+
+.footer-copyright__item {
+    display: inline-block;
+    position: relative;
+    padding: 0 4px;
+
 }
 
 /* MODAL */
