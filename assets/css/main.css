@@ -743,7 +743,7 @@
     line-height: 1.2rem;
 
     position: absolute;
-    top: -15px;
+    top: -10px;
     left: 60%;
 
     padding: 2px 6px;
@@ -1528,8 +1528,8 @@ h4.footer__heading {
 
 h5.footer__heading {
     font-size: 1.4rem;
-    color: #5c5c5c;
-    margin-bottom: 15px;
+    color: var(--text-color);
+    margin-bottom: 30px;
 }
 
 .footer__desc {
@@ -1574,9 +1574,8 @@ h6.footer__heading {
 .footer-category__heading {
     font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #5c5c5c;
-    margin-bottom: 5px;
+    color: var(--text-color);
+    margin-bottom: 10px;
 }
 
 .footer-categories__list {
@@ -1590,8 +1589,7 @@ h6.footer__heading {
     position: relative;
 }
 
-.footer-category__item::before,
-.footer-copyright__item::before {
+.footer-category__item::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1607,13 +1605,8 @@ h6.footer__heading {
     height: 11px;
 }
 
-.footer-copyright__item::before {
-    right: -3px;
-    height: 100%;
-}
 
-.footer-category__item:last-child::before ,
-.footer-copyright__item:last-child::before{
+.footer-category__item:last-child::before {
     display: none;
 }
 
@@ -1685,31 +1678,13 @@ h6.footer__heading {
    
 }
 
-.footer-copyright__content {
-    text-align: center;
-}
-
-.footer-copyright__text,
-.footer-copyright__link {
+.footer-copyright__text {
     font-size: 1.4rem;
     color: var(--text-color);
     line-height: 2rem;
-}
-
-.footer-copyright__list {
-    display: inline;
-    
-}
-
-.footer-copyright__item {
-    display: inline-block;
-    position: relative;
-    padding: 0 4px;
-
-}
-
-.footer-copyright__text {
+    text-align: center;
     display: block;
+    padding: 0 10px;
 }
 
 /* MODAL */
