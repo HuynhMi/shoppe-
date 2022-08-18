@@ -443,6 +443,107 @@
 
 
 /* HEADER WITH SEARCH */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+.mobile-sidebar-checkbox:checked ~ .mobile-sidebar {
+    display: block;
+}
+
+.mobile-sidebar__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    animation: fadeIn linear 200ms;
+}
+
+.mobile-user-account {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 230px;
+    background-color: var(--white-color);
+    padding: 20px 0px;
+
+    transform: translateX(0%);
+    animation: showSidebar linear 200ms;
+    z-index: 1;
+}
+
+@keyframes  showSidebar {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.mobile-user-account__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    font-size: 2.8rem;
+    color: rgb(82, 82, 82);
+}
+
+
+.mobile-user-account__label {
+    font-size: 1.8rem;
+    color: #b3b3b3;
+    display: block;
+    margin: 0px 15px 15px;
+}
+
+.mobile-user-account__avatar {
+    --height: 60px;
+    width: var(--height);
+    height: var(--height);
+    border-radius: 50%;
+    margin: 0px 15px 15px;
+}
+
+.mobile-user-account__name {
+    font-size: 1.8rem;
+    margin: 0px 15px 10px;
+}
+
+.mobile-user-account__list {
+
+}
+
+.mobile-user-account__item {
+    padding: 15px 15px;
+
+}
+
+.mobile-user-account__link {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+
+}
+
+.mobile-user-account__icon {
+    --height: 20px;
+    width: var(--height);
+    height: var(--height);
+    border-radius: 50%;
+    margin-top: -2px;
+    margin-right: 10px;
+}
 
 
 .header-with-search {
@@ -454,21 +555,26 @@
     align-items: center;
     height: var(--header-with-search-height);
 }
+.header-mobile-control {
+    display: none;
+}
 
-.header-menu-bar {
+.mobile-menu-bar {
+    padding: 0px 15px 0px 10px;
+    display: inline-block;
+}
 
-}.header-logo__link 
-
-.header-menu-bar__icon,
-.header-search-mobile__icon {
-    font-size: 2.4rem;
+.mobile-menu-bar__icon,
+.mobile-search-mobile__icon {
+    font-size: 2.2rem;
     color: var(--white-color);
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header-search-mobile {
     padding: 10px 10px 10px 10px;
-    display: none;
+    display: inline-block;
 }
 
 .header-search-mobile__icon {
@@ -483,6 +589,7 @@
     width: 150px;
     display: block;
     line-height: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -725,6 +832,7 @@
 .header-cart-inner {
     margin: auto;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header-cart__button {
@@ -760,9 +868,9 @@
     right: -7px;
 
     background-color: var(--white-color);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
 
-    border: 1px solid #ebebeb;
+    border: 1px solid #dddddd;
     border-radius: 3px;
     transform-origin: calc(100% - 30px) top;
 
@@ -941,7 +1049,7 @@
 /* CONTAINER */
 .container {
     background-color: #F5F5F5;
-    padding: 30px 0px;
+    padding: 50px 0px;
     margin-top: calc(var(--header-height) + var(--sort-bar-height));
 }
 /* category */
@@ -1239,7 +1347,7 @@
     display: block;
     user-select: none;
     -webkit-user-select: none;
-
+    -webkit-tap-highlight-color: transparent;
     border-radius: 4px;
 
     word-wrap: break-word;
@@ -1260,13 +1368,17 @@
    
 }
 
+.home-product-link {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .home-product-item {
     transition: all linear 150ms;
     transform: translateY(0px);
     box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.07);
     background-color: var(--white-color);
     border-radius: 3px;
-    
+    margin-bottom: 10px;
 }
 
 .home-product-item:hover {
@@ -1441,7 +1553,7 @@
 
 /* Pagination */
 .home-pagination {
-    padding: 40px 0px 10px;
+    padding: 40px 0px 0px;
 }
 
 .home-pagination__list {
@@ -1471,7 +1583,7 @@
     line-height: var(--height);
     font-size: 2rem;
     text-align: center;
-    color: #ADADAD;
+    color: #a1a1a1;
 }
 
 .home-pagination__item {
