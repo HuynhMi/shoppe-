@@ -1,3 +1,2 @@
-# shoppe-
-clone
-Shopee
+# Shopee 
+The responsive project. Made by Huynh Mi
