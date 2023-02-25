@@ -7,6 +7,14 @@
     </a>
   </sub>
 </div>
+### Description
+
+The website is basically an project build by pure html and css.
+The project applied BEM.
+The project is fully responsive design and friendly mobile/tablet.
+
+<br/>
+👉 demo: https://huynhmi.github.io/shoppe-/
 
 ### Screen shots
 #### Header, SideBar
@@ -22,11 +30,4 @@
 ![image](https://user-images.githubusercontent.com/54268240/221330400-81fe95c0-e60f-47fd-9e3b-54d37501920c.png)
 
 
-### Description
 
-The website is basically an project build by pure html and css.
-The project applied BEM.
-The project is fully responsive design and friendly mobile/tablet.
-
-<br/>
-👉 demo: https://huynhmi.github.io/shoppe-/
