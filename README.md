@@ -10,7 +10,7 @@
 
 ### Screen shots
 <div>
-  ![Screenshot](shortcut1.png)
+  https://user-images.githubusercontent.com/54268240/221328838-cff71454-55f5-4cd6-8b92-02722e0ce362.png
 </div>
 
 ### Description
